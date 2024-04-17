@@ -1,0 +1,65 @@
+@charset "UTF-8";
+.composition {
+  text-align: center;
+  padding-bottom: 114px;
+}
+.composition__title {
+  font-size: 64px;
+  line-height: 80px;
+  margin-bottom: 40px;
+}
+.composition__text {
+  max-width: 653px;
+  margin: 0 auto 40px;
+}
+.composition__list {
+  max-width: 625px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.composition__list-item {
+  width: 230px;
+}
+
+.content-item.content-item__active {
+  /*Якщо є цих двоє класів, то тоді спрацює*/
+  display: inline-block;
+}
+
+.content-item {
+  display: none;
+}
+
+.qwerty {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 775px) {
+  .composition {
+    margin-bottom: 60px;
+  }
+  .composition__title {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .composition__list-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .composition__list {
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: left;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 420px) {
+  .composition__title {
+    font-size: 24px;
+  }
+}/*# sourceMappingURL=composition.css.map */

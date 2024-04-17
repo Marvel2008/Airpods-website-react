@@ -1,0 +1,55 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+}
+
+.main__title {
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/*# sourceMappingURL=styles.css.map */
+
+@media screen and (max-width:775px) {
+  .main__title {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width:420px) {
+  .main__title {
+    font-size: 24px;
+  }
+}

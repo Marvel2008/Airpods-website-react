@@ -1,0 +1,67 @@
+@charset "UTF-8";
+.battery {
+  width: 100%;
+  background-color: #fafafa;
+  padding: 110px 0 98px;
+  text-align: center;
+}
+.battery__title {
+  line-height: 80px;
+  margin-bottom: 39px;
+}
+.battery__text {
+  max-width: 825px;
+  margin: 0 auto 40px;
+}
+
+.energy__title { /*Ми не пишемо додаткових стилів картинці бо і так вона буде працювати з скріптом і щоб забагато на ню не вішати*/
+  line-height: 80px;
+  padding-top: 160px;
+  margin-bottom: 40px;
+}
+
+.energy__num {
+  font-size: 210px;
+  font-weight: 700;
+  margin: revert;
+}
+
+.energy__text {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.content-item.content-item__active { /*Якщо є цих двоє класів, то тоді спрацює*/
+  display: inline-block;
+}
+
+.content-item {
+  display: none;
+}
+
+@media screen and (max-width: 775px) {
+  .battery {
+    padding: 60px 0;
+  }
+  .energy__title {
+    padding-top: 60px;
+    margin-bottom: -40px;
+  }
+  .energy__num {
+    font-size: 110px;
+    margin-bottom: 75px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .battery {
+    padding: 40px 0;
+  }
+}
+@media screen and (max-width: 560px) {
+  .energy__num {
+    font-size: 95px;
+  }
+  .battery img {
+    width: 100%;
+  }
+}/*# sourceMappingURL=battery.css.map */

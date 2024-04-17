@@ -1,0 +1,54 @@
+.audio {
+    /* position:relative;*/
+    background-image: url(../../assets/Full-compose.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+
+    &__inner {
+        display: flex;
+        align-items: flex-end;
+        /*Поставили по центру і опустили завдяки цьому параметру до низу*/
+        justify-content: center;
+        min-height: 220vh;
+    }
+
+    &__box {
+        color: white;
+        text-align: center;
+        padding-bottom: 50vh;
+    }
+
+    &__text {
+        width: 300px;
+        font-size: 500;
+    }
+}
+
+
+.btn {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #000;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 15px 58px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:775px) {
+    .battery{
+        padding: 60px 0;
+    }
+}
+@media screen and (max-width:560px) {
+    .battery{
+        padding: 40px 0;
+    }
+}
+@media screen and (max-width:560px) {
+    .battery img{
+        width: 100%;
+    }
+}

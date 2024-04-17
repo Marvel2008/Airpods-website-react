@@ -1,0 +1,189 @@
+.header {
+    min-height: 100vh;
+    /*Така висота буде на все вікно перегляду*/
+}
+.container{
+    max-width: 1220px;
+    padding: 0 10px;/*Зробили мінімальні відступи, щоб при адаптувані не було в притик*/
+    margin: 0 auto;
+}
+.header__top {
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__content-images {
+    text-align: center;
+    /*Цей обєкт є блочним, бо дів*/
+    padding-bottom: 50px;
+    /*Навсякий випадок, щоб картинка не прилипла до низу*/
+}
+.header__content-images::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -2;
+}
+
+.content-item{
+    display: none;
+}
+.content-item.content-item__active{/*Якщо є цих двоє класів, то тоді спрацює*/
+    display: inline-block;
+}
+$header-colors: (
+    red: #F3D6D1,
+    blue: #CADBEB,
+    green: #DDEAD9,
+    black: #B6B6B6,
+    white: #FAFAFA
+);
+
+@each $color-name, $color-value in $header-colors {
+    .header__content-images:has(.color--#{$color-name}.content-item__active)::before {
+        background: linear-gradient(180deg, $color-value 0%, rgba(235, 235, 235, 0.00) 100%);
+    }
+}
+
+.menu__list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-weight: 700;
+}
+
+.menu__item {
+    cursor: pointer;
+}
+
+.menu__btn {
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 15px 58px;
+    border-radius: 30px;
+    background-color: #000;
+}
+
+.title {
+    font-size: 210px;
+    font-weight: 700;
+    line-height: 120%;
+    position: absolute;
+    padding-top: 110px;
+}
+
+.title--pod {
+    position: relative;
+    z-index: -1;
+}
+
+.title--s {
+    display: inline-block;
+    /*Написали це замість абсолютного позиціонування, бо будемо сайт адаптувати і позиціонування принесе багато проблем*/
+    transform: translateY(50px);
+    /*Переносить об'єкт в низ відносно його абсолютної позиції*/
+}
+
+.title--m {
+    display: inline-block;
+    transform: translate(-55px, 275px);
+}
+
+.title--ax {
+    display: inline-block;
+    transform: translate(-128px, 413px);
+    z-index: -1;
+    position: relative;
+    /*Елемент отримує новий контекст стеку*/
+}
+
+@media screen and (max-width:1472px) {
+    .header__content-images {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 180px;
+        transform: translate(129px, 20px);
+    }
+}
+
+@media screen and (max-width:1349px) {
+    .title {
+        transform: none;
+        font-size: 140px;
+        padding-top: 15vh;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    .title--pod {
+        z-index: -1;
+    }
+
+    .title--s {
+        transform: none;
+
+    }
+
+    .title--m {
+        transform: none;
+    }
+
+    .title--ax {
+        transform: none;
+    }
+}
+
+@media screen and (max-width:920px) {
+    .title {
+        position: relative;
+        font-size: 100px;
+        padding-top: 0;
+    }
+
+    .title--m {
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width:810px) {
+    .header__content-images img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:810px) {
+    .title {
+        font-size: 75px;
+    }
+}
+
+@media screen and (max-width:560px) {
+    .header__top {
+        align-items: flex-start;
+    }
+
+    .title {
+        font-size: 55px;
+    }
+}
+@media screen and (max-width:490px) {
+    .manu__list {
+        
+    }
+}
+@media screen and (max-width:400px) {
+    .title {
+        font-size: 45px;
+    }
+}
